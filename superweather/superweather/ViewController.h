@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LocationTool.h"
 
-@interface ViewController : UIViewController
-
-@property (strong, nonatomic) LocationTool* location;
-@property (weak, nonatomic) IBOutlet UILabel *lattitudeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *longditudeLabel;
+@interface ViewController : UIViewController<LocationListener>
 
 @end
 

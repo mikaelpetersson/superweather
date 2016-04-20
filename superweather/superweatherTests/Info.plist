@@ -22,6 +22,8 @@
 	<array>
 		<string>location-services</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Uses the GPS</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 </dict>

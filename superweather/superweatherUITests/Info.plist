@@ -18,6 +18,10 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Uses the GPS</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Uses the GPS</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 </dict>

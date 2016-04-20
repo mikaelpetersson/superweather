@@ -13,10 +13,7 @@
 		308425F61CC3DAF100EC25B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308425F41CC3DAF100EC25B5 /* Main.storyboard */; };
 		308425F81CC3DAF100EC25B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308425F71CC3DAF100EC25B5 /* Assets.xcassets */; };
 		308425FB1CC3DAF100EC25B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308425F91CC3DAF100EC25B5 /* LaunchScreen.storyboard */; };
-		308426061CC3DAF100EC25B5 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 308426051CC3DAF100EC25B5 /* LocationTests.m */; };
-		308426111CC3DAF100EC25B5 /* superweatherUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 308426101CC3DAF100EC25B5 /* superweatherUITests.m */; };
 		308426241CC3DF0600EC25B5 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 308426231CC3DF0600EC25B5 /* LocationTool.m */; };
-		308426261CC3E81F00EC25B5 /* TestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 308426251CC3E81F00EC25B5 /* TestTest.m */; };
 		308426271CC3FE4F00EC25B5 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 308426231CC3DF0600EC25B5 /* LocationTool.m */; };
 		308426281CC3FE4F00EC25B5 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 308426231CC3DF0600EC25B5 /* LocationTool.m */; };
 /* End PBXBuildFile section */
@@ -50,14 +47,11 @@
 		308425FA1CC3DAF100EC25B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		308425FC1CC3DAF100EC25B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308426011CC3DAF100EC25B5 /* superweatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = superweatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		308426051CC3DAF100EC25B5 /* LocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
 		308426071CC3DAF100EC25B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3084260C1CC3DAF100EC25B5 /* superweatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = superweatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		308426101CC3DAF100EC25B5 /* superweatherUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = superweatherUITests.m; sourceTree = "<group>"; };
 		308426121CC3DAF100EC25B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308426221CC3DF0600EC25B5 /* LocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTool.h; sourceTree = "<group>"; };
 		308426231CC3DF0600EC25B5 /* LocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTool.m; sourceTree = "<group>"; };
-		308426251CC3E81F00EC25B5 /* TestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,9 +126,7 @@
 		308426041CC3DAF100EC25B5 /* superweatherTests */ = {
 			isa = PBXGroup;
 			children = (
-				308426051CC3DAF100EC25B5 /* LocationTests.m */,
 				308426071CC3DAF100EC25B5 /* Info.plist */,
-				308426251CC3E81F00EC25B5 /* TestTest.m */,
 			);
 			path = superweatherTests;
 			sourceTree = "<group>";
@@ -142,7 +134,6 @@
 		3084260F1CC3DAF100EC25B5 /* superweatherUITests */ = {
 			isa = PBXGroup;
 			children = (
-				308426101CC3DAF100EC25B5 /* superweatherUITests.m */,
 				308426121CC3DAF100EC25B5 /* Info.plist */,
 			);
 			path = superweatherUITests;
@@ -323,9 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308426061CC3DAF100EC25B5 /* LocationTests.m in Sources */,
 				308426271CC3FE4F00EC25B5 /* LocationTool.m in Sources */,
-				308426261CC3E81F00EC25B5 /* TestTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				308426281CC3FE4F00EC25B5 /* LocationTool.m in Sources */,
-				308426111CC3DAF100EC25B5 /* superweatherUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
