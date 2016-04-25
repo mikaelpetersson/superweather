@@ -10,12 +10,10 @@
 
 @implementation LocationTool {
     CLLocation *position;
-    NSMutableArray *listeners;
 }
 
 -(instancetype) init {
     if (self = [super init]) {
-        listeners = [[NSMutableArray alloc] init];
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.delegate = self;
         _locationManager.distanceFilter= 10; // meters
@@ -39,11 +37,6 @@
 }
 
 
-- (void) addListener: (NSObject<LocationListener>*) listener {
-    [listeners addObject: listener];
-}
-
-
 - (CLLocation*)position {
     return position;
 }
@@ -51,9 +44,11 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     position = locations.lastObject;
     NSLog(@"position: %@", position);
-    for (NSObject<LocationListener>* listener in listeners) {
-        [listener newPosition:position];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"NewLocation"
+         object:position];
+    });
 }
 
 @end

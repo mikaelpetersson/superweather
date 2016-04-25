@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LocationTool.h"
 
-@interface ViewController : UIViewController<LocationListener>
+@interface ViewController : UIViewController
 
 @end
 

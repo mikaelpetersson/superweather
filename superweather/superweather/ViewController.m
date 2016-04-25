@@ -18,16 +18,25 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.location = [LocationTool sharedTool];
-    [self.location addListener:self];
-    CLLocation *pos = [self.location position];
-//    self.lattitudeLabel.text = [NSString stringWithFormat:@"%.1f degrees", pos.coordinate.latitude];
-//    self.longditudeLabel.text = [NSString stringWithFormat:@"%.1f degrees", pos.coordinate.longitude];
+- (id) initWithCoder:(NSCoder *)aDecoder {
+    if ([super initWithCoder:aDecoder]) {
+        _location = [LocationTool sharedTool];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(receiveNewLocation:)
+                                                     name:@"NewLocation"
+                                                   object:nil];
+    }
+    return self;
 }
 
-- (void) newPosition:(CLLocation *)pos {
+- (void) dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+- (void) receiveNewLocation:(NSNotification *) notification {
+    CLLocation *pos = (CLLocation*) notification.object;
     self.lattitudeLabel.text = [NSString stringWithFormat:@"%.1f degrees", pos.coordinate.latitude];
     self.longditudeLabel.text = [NSString stringWithFormat:@"%.1f degrees", pos.coordinate.longitude];
 }
